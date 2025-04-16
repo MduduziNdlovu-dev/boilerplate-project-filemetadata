@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-
 <html>
-   <head>
-      <title>File Metadata</title>
-      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="/public/style.css" rel="stylesheet" type="text/css">
-   </head>
-
-   <body>
-      <div class="container">
-        <h1>API Project: File Metadata Microservice</h1>
-
-        <h2>Usage:</h2>
-        <p>
-          Please Upload a File ...
-        </p>
-        <div class="view">
-          <h3 id="output"></h3>
-          <form enctype="multipart/form-data" method="POST" action="/api/fileanalyse">
-            <input id="inputfield" type="file" name="upfile">
-            <input id="button" type="submit" value="Upload">
-          </form>
-        </div>
-      </div>
-      <div class="footer">
-        <p>
-          by 
-          <a href="http://www.freecodecamp.com">freeCodeCamp</a>
-        </p>
-      </div>
-   </body>
+  <head>
+    <title>File Metadata Microservice</title>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 2rem;
+      }
+      .container {
+        max-width: 400px;
+        margin: auto;
+        border: 1px solid #ccc;
+        padding: 1rem;
+        border-radius: 8px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Upload a File</h1>
+      <form
+        action="/api/fileanalyse"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <input type="file" name="upfile" required />
+        <br /><br />
+        <button type="submit">Upload</button>
+      </form>
+    </div>
+  </body>
 </html>
